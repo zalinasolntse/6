@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Дильмухамедова Залина</title>
+    <script>
+        var opticalDisc = {
+            typedownload: "CD",
+            type:"CD-ROM",
+            interface: "USB",
+            maxReadSpeed: "52x",
+            maxWriteSpeed: "52x",
+            displayInfo: function() {
+                document.getElementById("opticalDiscInfo").innerHTML = "Тип установки: " + this.typedownload + "<br>" + 
+                                                                       "Тип: " + this.type + "<br>" +
+                                                                       "Интерфейс подключения: " + this.interface + "<br>" +
+                                                                       "Максимальная скорость чтения: " + this.maxReadSpeed + "<br>" +
+                                                                       "Максимальная скорость записи: " + this.maxWriteSpeed;
+            }
+        };
+
+        function displayOpticalDiscInfo() {
+            opticalDisc.displayInfo();
+        }
+    </script>
+</head>
+<body>
+    <h1></h1>
+    <button onclick="displayOpticalDiscInfo()">Показать информацию об оптическом носителе</button>
+    <div id="opticalDiscInfo"></div>
+</body>
+</html>

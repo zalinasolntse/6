@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Дильмухамедова Залина</title>
+    <script>
+        function OpticalDisc(type, interface, maxReadSpeed, maxWriteSpeed,releaseDate) {
+            this.type = type;
+            this.interface = interface;
+            this.maxReadSpeed = maxReadSpeed;
+            this.maxWriteSpeed = maxWriteSpeed;
+            this.releaseDate = releaseDate;
+        }
+
+        OpticalDisc.prototype.displayInfo = function() {
+            document.getElementById("opticalDiscInfo").innerHTML = "Тип установки: " + this.type + "<br>" +
+                                                                    "Тип интерфейса подключения: " + this.interface + "<br>" +
+                                                                    "Максимальная скорость чтения: " + this.maxReadSpeed + "<br>" +
+                                                                    "Максимальная скорость записи: " + this.maxWriteSpeed + "<br>" +
+                                                                    "Дата выхода на рынок: " + this.releaseDate + "<br>" ;
+        };
+
+        function displayOpticalDiscInfo() {
+            var opticalDisc = new OpticalDisc("CD", "USB", "52x", "52x","17 августа 1982 года ");
+            opticalDisc.displayInfo();
+        }
+    </script>
+</head>
+<body>
+    <h1></h1>
+    <button onclick="displayOpticalDiscInfo()">Показать информацию об оптическом носителе</button>
+    <div id="opticalDiscInfo"></div>
+</body>
+</html>
